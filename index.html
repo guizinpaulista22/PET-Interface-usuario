@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="phone-frame">
+
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <span>15:33</span>
+        <div class="status-icons">
+          <i class="fa fa-signal"></i>
+          <i class="fa fa-wifi"></i>
+          <i class="fa fa-battery-full"></i>
+        </div>
+      </div>
+
+      <!-- Header -->
+      <div class="header">
+        <div class="header-left">
+          <span class="govbr"><span class="gov">gov</span><span class="br">.br</span></span>
+        </div>
+        <div class="header-center">
+          <span class="header-greeting">Olá, <strong>Roberta</strong></span>
+        </div>
+        <div class="header-right">
+          <i class="fa fa-bell"></i>
+        </div>
+      </div>
+
+      <!-- Banner -->
+      <div class="banner">
+        <img src="sus.png" alt="SUS Pra Você" class="banner-logo">
+      </div>
+
+      <!-- Grid de Cards -->
+      <div class="content">
+        <div class="grid">
+          <div class="card" onclick="abrirTela('orientacoesScreen')">
+            <div class="card-icon">
+              <i class="fa fa-lightbulb"></i>
+            </div>
+            <span>orientações</span>
+          </div>
+          <div class="card" onclick="abrirChat()">
+            <div class="card-icon">
+              <i class="fa fa-calendar-check"></i>
+            </div>
+            <span>agendamentos</span>
+          </div>
+          <div class="card" onclick="abrirTela('historicoScreen')">
+            <div class="card-icon">
+              <i class="fa fa-hourglass-half"></i>
+            </div>
+            <span>histórico</span>
+          </div>
+          <div class="card" onclick="abrirTela('notificacoesScreen')">
+            <div class="card-icon bell-icon">
+              <i class="fa fa-bell"></i>
+              <span class="badge">!</span>
+            </div>
+            <span>notificações</span>
+          </div>
+          <div class="card" onclick="abrirTela('farmaciaScreen')" style="grid-column: 1 / -1; max-width: calc(50% - 5px); margin: 0 auto; width: 100%;">
+            <div class="card-icon">
+              <i class="fa fa-pills"></i>
+            </div>
+            <span>farmácia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Nav -->
+      <div class="bottom-nav">
+        <div class="nav-item active" onclick="irInicio()">
+          <i class="fa fa-house"></i>
+          <span>Início</span>
+        </div>
+        <div class="nav-center">
+          <i class="fa fa-plus"></i>
+        </div>
+        <div class="nav-item" onclick="abrirTela('perfilScreen')">
+          <i class="fa fa-user"></i>
+          <span>Perfil</span>
+        </div>
+      </div>
+
+      <!-- Tela do Chat -->
+      <div class="chat-screen" id="chatScreen">
+        <div class="chat-header">
+          <button onclick="fecharTela('chatScreen')" class="btn-voltar">
+            <i class="fa fa-arrow-left"></i> Voltar
+          </button>
+          <span>Assistente de Saúde</span>
+        </div>
+        <iframe
+          src="https://chat-iasys.netlify.app"
+          width="100%"
+          height="100%"
+          frameborder="0">
+        </iframe>
+      </div>
+
+      <!-- Tela de Orientações -->
+      <div class="tela-screen" id="orientacoesScreen">
+        <div class="tela-header">
+          <button onclick="fecharTela('orientacoesScreen')" class="btn-voltar">
+            <i class="fa fa-arrow-left"></i> Voltar
+          </button>
+          <span>Orientações</span>
+        </div>
+        <div class="tela-conteudo">
+          <div class="orientacao-item">
+            <div class="ori-icon"><i class="fa fa-user-plus"></i></div>
+            <div>
+              <strong>Como me cadastrar?</strong>
+              <p>Acesse a aba Perfil e preencha seus dados pessoais. Seu cadastro será vinculado à UBS mais próxima.</p>
+            </div>
+          </div>
+          <div class="orientacao-item">
+            <div class="ori-icon"><i class="fa fa-calendar-check"></i></div>
+            <div>
+              <strong>Como agendar uma consulta?</strong>
+              <p>Toque em "Agendamentos" na tela inicial e escolha a data, horário e tipo de atendimento desejado.</p>
+            </div>
+          </div>
+          <div class="orientacao-item">
+            <div class="ori-icon"><i class="fa fa-robot"></i></div>
+            <div>
+              <strong>Como usar o Assistente?</strong>
+              <p>Clique em "Agendamentos" para abrir o chat. Ele responde dúvidas e ajuda no agendamento automaticamente.</p>
+            </div>
+          </div>
+          <div class="orientacao-item">
+            <div class="ori-icon"><i class="fa fa-bell"></i></div>
+            <div>
+              <strong>Como funcionam as notificações?</strong>
+              <p>Você receberá alertas sobre consultas agendadas, vacinas disponíveis e lembretes importantes da sua UBS.</p>
+            </div>
+          </div>
+          <div class="orientacao-item">
+            <div class="ori-icon"><i class="fa fa-clock-rotate-left"></i></div>
+            <div>
+              <strong>O que é o Histórico?</strong>
+              <p>No Histórico você encontra todas as consultas, vacinas e atendimentos realizados desde seu cadastro.</p>
+            </div>
+          </div>
+          <div class="orientacao-item">
+            <div class="ori-icon"><i class="fa fa-shield-halved"></i></div>
+            <div>
+              <strong>Meus dados estão seguros?</strong>
+              <p>Sim! Todos os dados são protegidos conforme a LGPD e utilizados apenas para fins de saúde pública.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tela de Notificações -->
+      <div class="tela-screen" id="notificacoesScreen">
+        <div class="tela-header">
+          <button onclick="fecharTela('notificacoesScreen')" class="btn-voltar">
+            <i class="fa fa-arrow-left"></i> Voltar
+          </button>
+          <span>Notificações</span>
+        </div>
+        <div class="tela-conteudo">
+          <div class="notif-item notif-alerta">
+            <div class="notif-icon"><i class="fa fa-syringe"></i></div>
+            <div>
+              <strong>Vacina disponível!</strong>
+              <p>A vacina da gripe (Influenza) está disponível na sua UBS. Compareça com seu cartão de vacinas.</p>
+              <span class="notif-data">Hoje, 09:00</span>
+            </div>
+          </div>
+          <div class="notif-item notif-info">
+            <div class="notif-icon"><i class="fa fa-calendar-check"></i></div>
+            <div>
+              <strong>Consulta confirmada</strong>
+              <p>Sua consulta com Dr. Marcos (Clínico Geral) foi confirmada para 15/03/2026 às 10h30.</p>
+              <span class="notif-data">Ontem, 14:22</span>
+            </div>
+          </div>
+          <div class="notif-item notif-alerta">
+            <div class="notif-icon"><i class="fa fa-triangle-exclamation"></i></div>
+            <div>
+              <strong>Lembrete de consulta</strong>
+              <p>Você tem uma consulta amanhã às 10h30. Chegue com 15 minutos de antecedência.</p>
+              <span class="notif-data">Ontem, 08:00</span>
+            </div>
+          </div>
+          <div class="notif-item notif-info">
+            <div class="notif-icon"><i class="fa fa-notes-medical"></i></div>
+            <div>
+              <strong>Resultado disponível</strong>
+              <p>O resultado do seu exame de sangue já está disponível. Acesse pelo histórico ou retire na UBS.</p>
+              <span class="notif-data">10/03/2026</span>
+            </div>
+          </div>
+          <div class="notif-item notif-info">
+            <div class="notif-icon"><i class="fa fa-syringe"></i></div>
+            <div>
+              <strong>Reforço de vacina</strong>
+              <p>Está na hora do reforço da vacina Hepatite B. Agende ou compareça diretamente à UBS.</p>
+              <span class="notif-data">08/03/2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tela de Histórico -->
+      <div class="tela-screen" id="historicoScreen">
+        <div class="tela-header">
+          <button onclick="fecharTela('historicoScreen')" class="btn-voltar">
+            <i class="fa fa-arrow-left"></i> Voltar
+          </button>
+          <span>Histórico</span>
+        </div>
+        <div class="tela-conteudo">
+          <p class="historico-titulo">📋 Atividades recentes</p>
+
+          <div class="hist-item">
+            <div class="hist-icon hist-consulta"><i class="fa fa-stethoscope"></i></div>
+            <div>
+              <strong>Consulta — Clínico Geral</strong>
+              <p>Dr. Marcos Souza · UBS Petrolina Centro</p>
+              <span class="hist-data">05/03/2026</span>
+            </div>
+          </div>
+          <div class="hist-item">
+            <div class="hist-icon hist-vacina"><i class="fa fa-syringe"></i></div>
+            <div>
+              <strong>Vacina — COVID-19 (Reforço)</strong>
+              <p>Dose aplicada · Enfermeira Ana Lima</p>
+              <span class="hist-data">20/02/2026</span>
+            </div>
+          </div>
+          <div class="hist-item">
+            <div class="hist-icon hist-exame"><i class="fa fa-flask"></i></div>
+            <div>
+              <strong>Exame — Hemograma Completo</strong>
+              <p>Laboratório UBS · Resultado entregue</p>
+              <span class="hist-data">18/02/2026</span>
+            </div>
+          </div>
+          <div class="hist-item">
+            <div class="hist-icon hist-consulta"><i class="fa fa-stethoscope"></i></div>
+            <div>
+              <strong>Consulta — Pediatria</strong>
+              <p>Dra. Fernanda Alves · UBS Petrolina Norte</p>
+              <span class="hist-data">10/01/2026</span>
+            </div>
+          </div>
+          <div class="hist-item">
+            <div class="hist-icon hist-vacina"><i class="fa fa-syringe"></i></div>
+            <div>
+              <strong>Vacina — Influenza</strong>
+              <p>Dose aplicada · Campanha 2025</p>
+              <span class="hist-data">03/12/2025</span>
+            </div>
+          </div>
+          <div class="hist-item">
+            <div class="hist-icon hist-exame"><i class="fa fa-flask"></i></div>
+            <div>
+              <strong>Exame — Glicemia em Jejum</strong>
+              <p>Laboratório UBS · Resultado entregue</p>
+              <span class="hist-data">15/11/2025</span>
+            </div>
+          </div>
+          <div class="hist-item">
+            <div class="hist-icon hist-consulta"><i class="fa fa-stethoscope"></i></div>
+            <div>
+              <strong>Consulta — Ginecologia</strong>
+              <p>Dra. Camila Torres · UBS Petrolina Centro</p>
+              <span class="hist-data">02/10/2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tela de Perfil -->
+      <div class="tela-screen" id="perfilScreen">
+        <div class="tela-header">
+          <button onclick="fecharTela('perfilScreen')" class="btn-voltar">
+            <i class="fa fa-arrow-left"></i> Voltar
+          </button>
+          <span>Perfil</span>
+        </div>
+        <div class="tela-conteudo">
+          <div class="perfil-topo">
+            <div class="perfil-avatar"><i class="fa fa-user"></i></div>
+            <strong>Roberta Silva</strong>
+            <span>CPF: •••.•••.•••-72</span>
+          </div>
+
+          <div class="perfil-menu">
+            <div class="perfil-item">
+              <i class="fa fa-id-card"></i>
+              <span>Informações pessoais</span>
+              <i class="fa fa-chevron-right seta"></i>
+            </div>
+            <div class="perfil-item">
+              <i class="fa fa-hospital"></i>
+              <span>UBS em que estou cadastrado</span>
+              <i class="fa fa-chevron-right seta"></i>
+            </div>
+            <div class="perfil-item">
+              <i class="fa fa-clock-rotate-left"></i>
+              <span>Últimas consultas</span>
+              <i class="fa fa-chevron-right seta"></i>
+            </div>
+            <div class="perfil-item">
+              <i class="fa fa-circle-question"></i>
+              <span>Dúvidas frequentes</span>
+              <i class="fa fa-chevron-right seta"></i>
+            </div>
+            <div class="perfil-item">
+              <i class="fa fa-headset"></i>
+              <span>Ajuda</span>
+              <i class="fa fa-chevron-right seta"></i>
+            </div>
+            <div class="perfil-item perfil-sair">
+              <i class="fa fa-right-from-bracket"></i>
+              <span>Sair da conta</span>
+              <i class="fa fa-chevron-right seta"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tela de Farmácia -->
+      <div class="tela-screen" id="farmaciaScreen">
+        <div class="tela-header">
+          <button onclick="fecharTela('farmaciaScreen')" class="btn-voltar">
+            <i class="fa fa-arrow-left"></i> Voltar
+          </button>
+          <span>Farmácia da UBS</span>
+        </div>
+        <div class="tela-conteudo">
+
+          <!-- Horário -->
+          <div class="orientacao-item">
+            <div class="ori-icon"><i class="fa fa-clock"></i></div>
+            <div>
+              <strong>Horário de Funcionamento</strong>
+              <p>Segunda a sexta-feira<br>
+                 ☀️ Manhã: 08h às 12h<br>
+                 🌤️ Tarde: 13h às 17h</p>
+            </div>
+          </div>
+
+          <div class="farm-alerta">
+            <i class="fa fa-triangle-exclamation"></i>
+            A farmácia <strong>fecha no horário do almoço</strong> (12h às 13h). Planeje sua visita!
+          </div>
+
+          <!-- Orientações -->
+          <div class="orientacao-item">
+            <div class="ori-icon"><i class="fa fa-circle-info"></i></div>
+            <div>
+              <strong>Orientações</strong>
+              <p>Não utilize medicamentos por conta própria. Use apenas com <strong>prescrição de médico ou enfermeiro</strong>.</p>
+            </div>
+          </div>
+
+          <div class="orientacao-item">
+            <div class="ori-icon"><i class="fa fa-calendar-check"></i></div>
+            <div>
+              <strong>Validade</strong>
+              <p>Verifique sempre o <strong>prazo de validade</strong> dos medicamentos antes de usar.</p>
+            </div>
+          </div>
+
+          <div class="orientacao-item">
+            <div class="ori-icon"><i class="fa fa-hospital"></i></div>
+            <div>
+              <strong>Efeitos adversos</strong>
+              <p>Se tiver algum sintoma diferente após usar um medicamento, <strong>procure atendimento na unidade de saúde</strong>.</p>
+            </div>
+          </div>
+
+          <div class="orientacao-item">
+            <div class="ori-icon"><i class="fa fa-pills"></i></div>
+            <div>
+              <strong>Modo de uso</strong>
+              <p>Siga corretamente as orientações sobre o <strong>modo de uso</strong> e a <strong>dose indicada</strong>.</p>
+            </div>
+          </div>
+
+          <div class="orientacao-item">
+            <div class="ori-icon"><i class="fa fa-wine-bottle"></i></div>
+            <div>
+              <strong>Bebidas alcoólicas</strong>
+              <p>Evite consumir <strong>bebidas alcoólicas</strong> durante o uso de medicamentos.</p>
+            </div>
+          </div>
+
+          <!-- Lembrete -->
+          <div class="farm-lembrete">
+            <strong><i class="fa fa-lightbulb"></i> Lembrete importante</strong>
+            Leve sempre a <strong>receita atualizada</strong> e um <strong>documento de identificação (CPF ou Cartão do SUS)</strong> ao procurar atendimento.
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
