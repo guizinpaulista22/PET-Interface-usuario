@@ -99,7 +99,7 @@
           <span>Assistente de Saúde</span>
         </div>
         <iframe
-          src="https://chat-iasys.netlify.app"
+          src="https://pet-saude-dev.github.io/new.chat.iasys.health/?agent=2"
           width="100%"
           height="100%"
           frameborder="0">
@@ -107,179 +107,53 @@
       </div>
 
       <!-- Tela de Orientações -->
-      <div class="tela-screen" id="orientacoesScreen">
-        <div class="tela-header">
+      <div class="chat-screen" id="orientacoesScreen">
+        <div class="chat-header">
           <button onclick="fecharTela('orientacoesScreen')" class="btn-voltar">
             <i class="fa fa-arrow-left"></i> Voltar
           </button>
           <span>Orientações</span>
         </div>
-        <div class="tela-conteudo">
-          <div class="orientacao-item">
-            <div class="ori-icon"><i class="fa fa-user-plus"></i></div>
-            <div>
-              <strong>Como me cadastrar?</strong>
-              <p>Acesse a aba Perfil e preencha seus dados pessoais. Seu cadastro será vinculado à UBS mais próxima.</p>
-            </div>
-          </div>
-          <div class="orientacao-item">
-            <div class="ori-icon"><i class="fa fa-calendar-check"></i></div>
-            <div>
-              <strong>Como agendar uma consulta?</strong>
-              <p>Toque em "Agendamentos" na tela inicial e escolha a data, horário e tipo de atendimento desejado.</p>
-            </div>
-          </div>
-          <div class="orientacao-item">
-            <div class="ori-icon"><i class="fa fa-robot"></i></div>
-            <div>
-              <strong>Como usar o Assistente?</strong>
-              <p>Clique em "Agendamentos" para abrir o chat. Ele responde dúvidas e ajuda no agendamento automaticamente.</p>
-            </div>
-          </div>
-          <div class="orientacao-item">
-            <div class="ori-icon"><i class="fa fa-bell"></i></div>
-            <div>
-              <strong>Como funcionam as notificações?</strong>
-              <p>Você receberá alertas sobre consultas agendadas, vacinas disponíveis e lembretes importantes da sua UBS.</p>
-            </div>
-          </div>
-          <div class="orientacao-item">
-            <div class="ori-icon"><i class="fa fa-clock-rotate-left"></i></div>
-            <div>
-              <strong>O que é o Histórico?</strong>
-              <p>No Histórico você encontra todas as consultas, vacinas e atendimentos realizados desde seu cadastro.</p>
-            </div>
-          </div>
-          <div class="orientacao-item">
-            <div class="ori-icon"><i class="fa fa-shield-halved"></i></div>
-            <div>
-              <strong>Meus dados estão seguros?</strong>
-              <p>Sim! Todos os dados são protegidos conforme a LGPD e utilizados apenas para fins de saúde pública.</p>
-            </div>
-          </div>
-        </div>
+        <iframe
+          src="https://pet-saude-dev.github.io/new.chat.iasys.health/?agent=1"
+          width="100%"
+          height="100%"
+          frameborder="0">
+        </iframe>
       </div>
 
+
       <!-- Tela de Notificações -->
-      <div class="tela-screen" id="notificacoesScreen">
-        <div class="tela-header">
+      <div class="chat-screen" id="notificacoesScreen">
+        <div class="chat-header">
           <button onclick="fecharTela('notificacoesScreen')" class="btn-voltar">
             <i class="fa fa-arrow-left"></i> Voltar
           </button>
           <span>Notificações</span>
         </div>
-        <div class="tela-conteudo">
-          <div class="notif-item notif-alerta">
-            <div class="notif-icon"><i class="fa fa-syringe"></i></div>
-            <div>
-              <strong>Vacina disponível!</strong>
-              <p>A vacina da gripe (Influenza) está disponível na sua UBS. Compareça com seu cartão de vacinas.</p>
-              <span class="notif-data">Hoje, 09:00</span>
-            </div>
-          </div>
-          <div class="notif-item notif-info">
-            <div class="notif-icon"><i class="fa fa-calendar-check"></i></div>
-            <div>
-              <strong>Consulta confirmada</strong>
-              <p>Sua consulta com Dr. Marcos (Clínico Geral) foi confirmada para 15/03/2026 às 10h30.</p>
-              <span class="notif-data">Ontem, 14:22</span>
-            </div>
-          </div>
-          <div class="notif-item notif-alerta">
-            <div class="notif-icon"><i class="fa fa-triangle-exclamation"></i></div>
-            <div>
-              <strong>Lembrete de consulta</strong>
-              <p>Você tem uma consulta amanhã às 10h30. Chegue com 15 minutos de antecedência.</p>
-              <span class="notif-data">Ontem, 08:00</span>
-            </div>
-          </div>
-          <div class="notif-item notif-info">
-            <div class="notif-icon"><i class="fa fa-notes-medical"></i></div>
-            <div>
-              <strong>Resultado disponível</strong>
-              <p>O resultado do seu exame de sangue já está disponível. Acesse pelo histórico ou retire na UBS.</p>
-              <span class="notif-data">10/03/2026</span>
-            </div>
-          </div>
-          <div class="notif-item notif-info">
-            <div class="notif-icon"><i class="fa fa-syringe"></i></div>
-            <div>
-              <strong>Reforço de vacina</strong>
-              <p>Está na hora do reforço da vacina Hepatite B. Agende ou compareça diretamente à UBS.</p>
-              <span class="notif-data">08/03/2026</span>
-            </div>
-          </div>
-        </div>
+        <iframe
+          src="https://pet-saude-dev.github.io/new.chat.iasys.health/?agent=4"
+          width="100%"
+          height="100%"
+          frameborder="0">
+        </iframe>
       </div>
 
+
       <!-- Tela de Histórico -->
-      <div class="tela-screen" id="historicoScreen">
-        <div class="tela-header">
+      <div class="chat-screen" id="historicoScreen">
+        <div class="chat-header">
           <button onclick="fecharTela('historicoScreen')" class="btn-voltar">
             <i class="fa fa-arrow-left"></i> Voltar
           </button>
           <span>Histórico</span>
         </div>
-        <div class="tela-conteudo">
-          <p class="historico-titulo">📋 Atividades recentes</p>
-
-          <div class="hist-item">
-            <div class="hist-icon hist-consulta"><i class="fa fa-stethoscope"></i></div>
-            <div>
-              <strong>Consulta — Clínico Geral</strong>
-              <p>Dr. Marcos Souza · UBS Petrolina Centro</p>
-              <span class="hist-data">05/03/2026</span>
-            </div>
-          </div>
-          <div class="hist-item">
-            <div class="hist-icon hist-vacina"><i class="fa fa-syringe"></i></div>
-            <div>
-              <strong>Vacina — COVID-19 (Reforço)</strong>
-              <p>Dose aplicada · Enfermeira Ana Lima</p>
-              <span class="hist-data">20/02/2026</span>
-            </div>
-          </div>
-          <div class="hist-item">
-            <div class="hist-icon hist-exame"><i class="fa fa-flask"></i></div>
-            <div>
-              <strong>Exame — Hemograma Completo</strong>
-              <p>Laboratório UBS · Resultado entregue</p>
-              <span class="hist-data">18/02/2026</span>
-            </div>
-          </div>
-          <div class="hist-item">
-            <div class="hist-icon hist-consulta"><i class="fa fa-stethoscope"></i></div>
-            <div>
-              <strong>Consulta — Pediatria</strong>
-              <p>Dra. Fernanda Alves · UBS Petrolina Norte</p>
-              <span class="hist-data">10/01/2026</span>
-            </div>
-          </div>
-          <div class="hist-item">
-            <div class="hist-icon hist-vacina"><i class="fa fa-syringe"></i></div>
-            <div>
-              <strong>Vacina — Influenza</strong>
-              <p>Dose aplicada · Campanha 2025</p>
-              <span class="hist-data">03/12/2025</span>
-            </div>
-          </div>
-          <div class="hist-item">
-            <div class="hist-icon hist-exame"><i class="fa fa-flask"></i></div>
-            <div>
-              <strong>Exame — Glicemia em Jejum</strong>
-              <p>Laboratório UBS · Resultado entregue</p>
-              <span class="hist-data">15/11/2025</span>
-            </div>
-          </div>
-          <div class="hist-item">
-            <div class="hist-icon hist-consulta"><i class="fa fa-stethoscope"></i></div>
-            <div>
-              <strong>Consulta — Ginecologia</strong>
-              <p>Dra. Camila Torres · UBS Petrolina Centro</p>
-              <span class="hist-data">02/10/2025</span>
-            </div>
-          </div>
-        </div>
+        <iframe
+          src="https://pet-saude-dev.github.io/new.chat.iasys.health/?agent=3"
+          width="100%"
+          height="100%"
+          frameborder="0">
+        </iframe>
       </div>
 
       <!-- Tela de Perfil -->

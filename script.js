@@ -12,5 +12,8 @@ function fecharTela(id) {
 
 function irInicio() {
   const telas = ['chatScreen', 'orientacoesScreen', 'notificacoesScreen', 'historicoScreen', 'perfilScreen', 'farmaciaScreen'];
-  telas.forEach(id => document.getElementById(id).classList.remove('ativo'));
+  telas.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.remove('ativo');
+  });
 }
